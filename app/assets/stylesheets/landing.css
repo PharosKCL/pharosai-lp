@@ -147,6 +147,95 @@ header {
   margin-left: 20px;
 }
 
+/* Team Grid Styling */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.team-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.team-name {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.team-linkedin {
+  display: inline-block;
+  line-height: 0;
+}
+
+.team-linkedin .linkedin-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.team-linkedin:hover .linkedin-icon {
+  opacity: 1;
+}
+
+.team-title {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: black;
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+.team-bio {
+  font-family: 'Jura', sans-serif;
+  font-size: 1em;
+  color: black;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
 /* Middle Section Styling */
 .middle-section {
   display: flex;
@@ -211,6 +300,10 @@ header {
 .partner-logo {
   max-width: 150px; /* Control the size of the logos */
   height: auto;
+}
+
+.partner-logo-small {
+  max-width: 100px; /* Smaller size for King's College and Barts Health Trust */
 }
 
 .footer-section {
