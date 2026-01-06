@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - PharosAI</title>
+  <%= stylesheet_link_tag "landing", "data-turbo-track": "reload" %>
+
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="/videos/iStock-1483562425.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Header with Logo -->
+  <header>
+    <div class="logo-container">
+      <a href="<%= root_path %>">
+        <img src="<%= image_path('pharos_logo_white2.png') %>" alt="PharosAI Logo" class="logo">
+      </a>
+      <a href="<%= root_path %>" class="logo-text-link"><span class="logo-text">PharosAI</span></a>
+    </div>
+    <nav class="header-nav">
+      <%= link_to "About", about_path, class: "nav-link" %>
+      <%= link_to "Team", team_path, class: "nav-link" %>
+      <%= link_to "Contact", contact_path, class: "nav-link" %>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/pharosai" target="_blank">
+          <img src="<%= image_path('linkedin2.png') %>" alt="LinkedIn" class="linkedin-icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="page-content">
+    <h1>Our Team</h1>
+    <p>Content coming soon...</p>
+  </div>
+</body>
+</html>
+
