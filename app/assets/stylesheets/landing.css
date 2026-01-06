@@ -6,8 +6,10 @@ body {
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: 'Montserrat';
+  align-items: stretch;
+  font-family: 'Jura';
+  width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -38,16 +40,48 @@ body {
 /* Header Styling */
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: transparent; /* Allow background video to show through */
-  padding: 20px;
+  padding: 20px 0;
   box-sizing: border-box;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.logo-container a {
+  display: inline-block;
+  line-height: 0; /* Prevent extra spacing */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding-right: 20px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: 'Jura', sans-serif;
+  font-size: 1.15em;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
 .social-icons {
-  margin-left: auto;
+  margin: 0;
 }
 
 .linkedin-icon {
@@ -56,10 +90,10 @@ header {
 }
 
 .logo {
-  width: 40%;
-  max-width: 40px; /* Set a maximum width for the logo */
+  width: 40px; /* Fixed width to match across all pages */
   height: auto;
-  margin-left: 25px;
+  margin: 0;
+  display: block;
 }
 
 .logo-text {
@@ -69,30 +103,80 @@ header {
   margin-left: 10px; /* Adjust space between the logo and text */
 }
 
+.logo-text-link {
+  text-decoration: none;
+  color: black;
+}
+
+.page-content {
+  padding: 50px 20px 100px 20px;
+  min-height: 80vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-content h1 {
+  font-family: 'Jura', sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-text p {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.page-content p {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
 /* Middle Section Styling */
 .middle-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   width: 100%;
-  text-align: center;
+  text-align: left;
   position: relative;
+  overflow: hidden; /* Prevent any overflow from causing shifts */
 }
 
 .middle-text {
-  font-size: 2.5em; /* Adjust font size as needed */
+  font-size: 2.6em; /* Slightly bigger font size */
   font-weight: 500;
   color: black; /* Ensure the text is black */
   margin: 0;
   line-height: 1.2em; /* Adjust line spacing */
   text-align: left; /* Align text to the left */
-  max-width: 900px; /* Set the maximum width to keep it aligned on the left */
-  padding-right: 50%; /* Optional: Adjust padding to push text to the left */
+  width: 800px; /* Fixed width to ensure text stays on 2 lines */
   white-space: pre-wrap; /* Ensures the line breaks are respected */
   position: absolute;
   top: 20%;
+  left: 70px; /* Aligned with the P from PharosAI (20px padding + 40px logo + 10px margin) */
+}
+
+.middle-text #typing-text {
+  display: inline-block;
+  white-space: pre-wrap;
 }
 
 .partner-section {
@@ -106,19 +190,22 @@ header {
 }
 
 .partner-section h2 {
-  font-family: 'Montserrat', sans-serif; /* Font of your choice */
+  font-family: 'Jura', sans-serif; /* Font of your choice */
   font-size: 2.5em;
   font-weight: 500;
   margin-bottom: 75px; /* Space between heading and content */
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .partners-logos {
   display: flex; /* Use Flexbox to position logos in a row */
-  justify-content: space-around; /* Equally space the logos */
+  justify-content: space-between; /* Spread logos evenly across the width */
   align-items: center; /* Center logos vertically */
   gap: 20px; /* Space between the logos */
   flex-wrap: wrap; /* Ensure logos wrap if screen size is too small */
+  width: 100%; /* Use full width */
+  padding: 0 20px; /* Add horizontal padding */
+  box-sizing: border-box;
 }
 
 .partner-logo {
@@ -126,31 +213,76 @@ header {
   height: auto;
 }
 
-.joinus-section {
+.footer-section {
   background-color: #f9f9f9; /* Light background for contrast */
-  padding: 40px 20px;
+  padding: 20px 20px 20px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Ensure text is centered */
+  justify-content: flex-end; /* Align content to the bottom */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left; /* Align text to the left */
   position: relative;
-  height: 280px; /* Adjust height as needed */
+  min-height: 100px; /* Half the original size */
+}
+
+.joinus-section {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 40px 20px 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between top content and bottom copyright */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left; /* Align text to the left */
+  position: relative;
+  min-height: 140px; /* Half the original size */
+}
+
+.contact-centered {
+  background-color: transparent; /* Remove background for contact page */
+  height: 100vh; /* Exactly viewport height, no scrolling */
+  max-height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+  justify-content: flex-start; /* Start from top */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  padding: 0;
+  padding-top: 30vh; /* Push content up by approximately 3cm */
+}
+
+.contact-centered .joinus-content {
+  margin-left: 0; /* Remove left margin when centered */
+}
+
+.contact-centered .copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.joinus-content {
+  margin-left: 20px; /* Add left margin to align with other sections */
 }
 
 .joinus-section p {
-  font-family: 'Montserrat', sans-serif; /* Apply the font */
+  font-family: 'Jura', sans-serif; /* Apply the font */
   font-size: 1.5em; /* Adjust font size */
   font-weight: 400; /* Set to normal weight */
   margin-bottom: 40px; /* Space below the text */
+}
+
+.contact-centered .joinus-content p {
+  font-size: 2em; /* Larger font size for contact page */
 }
 
 
 .joinus-logo {
   position: absolute; /* Position logo absolutely */
   bottom: 0px; /* Align the logo to the bottom */
-  left: 65px; /* Align the logo to the right */
+  left: 20px; /* Align the logo to the left */
   padding: 20px; /* Add padding around the logo */
 }
 
@@ -165,7 +297,7 @@ header {
   color: white;
   padding: 15px 30px;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: 1.2em;
   font-weight: 600;
   border-radius: 5px;
@@ -179,37 +311,28 @@ header {
 }
 
 .bottom-line {
-  width: 90%;
+  width: calc(100% - 40px); /* Full width minus left margin */
   border-bottom: 1px solid #555; /* Black line */
-  margin: 20px auto; /* Space above and below the line */
+  margin: 20px 20px 20px 20px; /* Space above and below the line, aligned to left */
 }
 
 .copyright {
-  margin-top: 20px;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 10px;
   color: grey;
 }
 
 .copyright p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: 0.9em; /* Smaller font for copyright */
   margin: 0;
 }
 
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: black; }
-}
-
-.middle-text span {
-  display: inline-block;
-  color: black;
-  animation: typing 4s steps(40, end);
 }
 
 
@@ -224,3 +347,4 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: black;
+}
