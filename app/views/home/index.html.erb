@@ -13,20 +13,27 @@
   <!-- Video Background -->
   <div class="video-background">
     <video autoplay muted loop id="background-video">
-      <source src="videos/iStock-1483562425.mp4" type="video/mp4">
+      <source src="/videos/iStock-1483562425.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
 
   <!-- Header with Logo -->
   <header>
-    <img src="images/pharos_logo_white2.png" alt="PharosAI Logo" class="logo">
-    <span class="logo-text">   PharosAI</span>
+    <div class="logo-container">
+      <img src="<%= image_path('pharos_logo_white2.png') %>" alt="PharosAI Logo" class="logo">
+      <span class="logo-text">PharosAI</span>
+    </div>
+    <nav class="header-nav">
+      <%= link_to "About", about_path, class: "nav-link" %>
+      <%= link_to "Team", team_path, class: "nav-link" %>
+      <%= link_to "Contact", contact_path, class: "nav-link" %>
       <div class="social-icons">
-    <a href="https://www.linkedin.com/company/pharosai" target="_blank">
-      <img src="images/linkedin2.png" alt="LinkedIn" class="linkedin-icon">
-    </a>
-  </div>
+        <a href="https://www.linkedin.com/company/pharosai" target="_blank">
+          <img src="<%= image_path('linkedin2.png') %>" alt="LinkedIn" class="linkedin-icon">
+        </a>
+      </div>
+    </nav>
   </header>
 
   <!-- Main Content Section -->
@@ -40,31 +47,22 @@
 <div class="partner-section">
   <h2>Our Partners</h2>
   <div class="partners-logos">
-    <img src="images/kings.png" alt="Partner 1" class="partner-logo">
-    <img src="images/barts.png" alt="Partner 2" class="partner-logo">
-    <img src="images/Guys.webp" alt="Partner 3" class="partner-logo">
-    <img src="images/qmul_new.png" alt="Partner 4" class="partner-logo">
-    <img src="images/khp.webp" alt="Partner 3" class="partner-logo">
-    <img src="images/Dawn.png" alt="Partner 4" class="partner-logo">
+    <img src="<%= image_path('kings.png') %>" alt="Partner 1" class="partner-logo">
+    <img src="<%= image_path('barts.png') %>" alt="Partner 2" class="partner-logo">
+    <img src="<%= image_path('Guys.webp') %>" alt="Partner 3" class="partner-logo">
+    <img src="<%= image_path('qmul_new.png') %>" alt="Partner 4" class="partner-logo">
+    <img src="<%= image_path('khp.webp') %>" alt="Partner 3" class="partner-logo">
+    <img src="<%= image_path('Dawn.png') %>" alt="Partner 4" class="partner-logo">
   </div>
 </div>
 
-<div class="joinus-section">
-  <div class="joinus-content">
-    <p>Interested in revolutionising healthcare?</p>
-    <a href="mailto:info@pharosai.co.uk" class="contact-button">Contact Us</a>
-  </div>
-  <div class="bottom-line"></div> <!-- Black line -->
+<div class="footer-section">
   <div class="copyright">
     <p>© 2024 King's College London. All rights reserved.</p>
-  </div>
-    <div class="joinus-logo">
-    <img src="images/pharos_logo.png" alt="PharosAI Logo" class="joinus-logo-img">
   </div>
 </div>
 
   <!-- JavaScript -->
-  <script src="script.js"></script>
   <%= javascript_importmap_tags "typing" %>
 </body>
 </html>
