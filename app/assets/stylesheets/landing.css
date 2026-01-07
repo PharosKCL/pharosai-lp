@@ -167,6 +167,12 @@ header {
   align-items: center;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
 .team-photo {
@@ -304,6 +310,17 @@ header {
 
 .partner-logo-small {
   max-width: 100px; /* Smaller size for King's College and Barts Health Trust */
+}
+
+.partner-logo,
+.partner-logo-small {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.partner-logo:hover,
+.partner-logo-small:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .footer-section {
