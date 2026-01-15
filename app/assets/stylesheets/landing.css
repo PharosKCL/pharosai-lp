@@ -458,3 +458,110 @@ nav ul li a {
   text-decoration: none;
   color: black;
 }
+
+
+/* Responsive Layouts */
+
+@media (max-width: 900px) {
+  .header-nav {
+    gap: 24px;
+  }
+
+  .middle-text {
+    width: calc(100% - 40px);
+    left: 20px;
+    font-size: 2.3em;
+  }
+
+  .team-grid {
+    padding: 0 16px;
+    gap: 30px;
+  }
+
+  .partner-logo {
+    max-width: 130px;
+  }
+
+  .partner-logo-small {
+    max-width: 85px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .logo-container {
+    padding-left: 15px;
+    margin-bottom: 8px;
+  }
+
+  .header-nav {
+    padding-right: 15px;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 1em;
+  }
+
+  .middle-section {
+    align-items: flex-start;
+    min-height: 70vh;
+  }
+
+  .middle-text {
+    position: static;
+    padding: 80px 20px 40px 20px;
+    width: 100%;
+    font-size: 2em;
+  }
+
+  .page-content {
+    padding: 40px 15px 60px 15px;
+  }
+
+  .page-content h1 {
+    font-size: 2.2em;
+  }
+
+  .about-text {
+    padding: 0 10px;
+  }
+
+  .team-grid {
+    padding: 0 12px;
+    gap: 24px;
+  }
+
+  .team-photo {
+    height: 260px;
+  }
+
+  .partners-logos {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .partner-logo {
+    max-width: 110px;
+  }
+
+  .partner-logo-small {
+    max-width: 70px;
+  }
+
+  .joinus-section p {
+    font-size: 1.2em;
+  }
+
+  .contact-centered {
+    height: auto;
+    max-height: none;
+    padding-top: 20vh;
+  }
+}
