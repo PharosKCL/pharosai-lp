@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team - PharosAI</title>
   <%= stylesheet_link_tag "landing", "data-turbo-track": "reload" %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('anita.jpg') %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('louise.jpg') %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('greg.jpg') %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('lucie.jpg') %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('claude.jpg') %>
+  <%= tag.link rel: "preload", as: "image", href: image_path('maj.jpg') %>
 
 </head>
 <body>
@@ -44,7 +50,7 @@
     <div class="team-grid">
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('anita.jpg') %>" alt="Anita Grigoriads">
+          <img src="<%= image_path('anita.jpg') %>" alt="Anita Grigoriads" loading="eager" fetchpriority="high">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">Anita Grigoriads</h3>
@@ -56,7 +62,7 @@
       </div>
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('louise.jpg') %>" alt="J.Louise Jones">
+          <img src="<%= image_path('louise.jpg') %>" alt="J.Louise Jones" loading="eager" fetchpriority="high">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">J.Louise Jones</h3>
@@ -68,7 +74,7 @@
       </div>
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('greg.jpg') %>" alt="Greg Verghese">
+          <img src="<%= image_path('greg.jpg') %>" alt="Greg Verghese" loading="eager">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">Greg Verghese</h3>
@@ -80,7 +86,7 @@
       </div>
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('lucie.jpg') %>" alt="Lucie Burgess">
+          <img src="<%= image_path('lucie.jpg') %>" alt="Lucie Burgess" loading="eager">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">Lucie Burgess</h3>
@@ -92,7 +98,7 @@
       </div>
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('claude.jpg') %>" alt="Claude Chalala">
+          <img src="<%= image_path('claude.jpg') %>" alt="Claude Chalala" loading="eager">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">Claude Chalala</h3>
@@ -104,7 +110,7 @@
       </div>
       <div class="team-member">
         <div class="team-photo">
-          <img src="<%= image_path('maj.jpg') %>" alt="Majid Kazmi">
+          <img src="<%= image_path('maj.jpg') %>" alt="Majid Kazmi" loading="eager">
         </div>
         <div class="team-name-container">
           <h3 class="team-name">Majid Kazmi</h3>
